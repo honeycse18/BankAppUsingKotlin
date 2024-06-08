@@ -25,8 +25,8 @@ class OnboardingAdapter(private val onboardingItems: List<OnboardingItem>) :
 
     class OnboardingViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val imageViewBackground: ImageView = itemView.findViewById(R.id.imageViewBackground)
-        private val textViewTitle: TextView = itemView.findViewById(R.id.textViewTitle)
-        private val textViewDescription: TextView = itemView.findViewById(R.id.textViewDescription)
+        private val textViewTitle: TextView = itemView.findViewById(R.id.titleId)
+        private val textViewDescription: TextView = itemView.findViewById(R.id.descriptionId)
 
         fun bind(onboardingItem: OnboardingItem) {
             imageViewBackground.setImageResource(onboardingItem.image)

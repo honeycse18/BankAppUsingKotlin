@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:padding="16dp"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/line_background"/>
+    <ImageView
+        android:id="@+id/imageViewBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_small"
+        android:layout_marginTop="15dp"
+        />
+    <TextView
+        android:id="@+id/homeTitleId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_gravity="center"
+        android:text="Let’s Get You Started"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/homeDescriptionId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/homeTitleId"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_gravity="center"
+        android:text="Enter a Referral code and we will give you 10 FundCoins just to get the ball rolling."
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editTextInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint=" Referral Code (Optional)"
+        android:inputType="text"
+        android:background="@drawable/text_field_background"
+        android:layout_below="@id/homeDescriptionId"
+        android:paddingStart="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/hint_color"
+
+        android:layout_marginTop="14dp"/>
+
+    <Button
+        android:id="@+id/buttonConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="300dp"
+        android:backgroundTint="@color/white"
+        android:background="@drawable/button_background"
+        android:text="Confirm" />
+
+
+    <Button
+        android:id="@+id/buttonSkip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/buttonConfirm"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/black"
+        android:text="Skip"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

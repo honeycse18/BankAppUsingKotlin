@@ -10,6 +10,8 @@ import androidx.core.content.ContextCompat
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.button.MaterialButton
 
+import android.content.Intent
+import com.example.bankappusingkotlin.R.id.buttonConfirm
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var indicatorsLayout: LinearLayout
     private lateinit var buttonNext: Button
     private lateinit var buttonBack: Button
+    private lateinit var buttonConfirm: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,7 +47,7 @@ class MainActivity : AppCompatActivity() {
             if (viewPager.currentItem + 1 < onboardingAdapter.itemCount) {
                 viewPager.currentItem += 1
             } else {
-                // Handle "Finish" action here
+                navigateToHome()
             }
         }
 
@@ -59,8 +62,9 @@ class MainActivity : AppCompatActivity() {
         val onboardingItems = listOf(
             OnboardingItem(R.drawable.intro1, "Welcome to\n" +
                     "Fundify!", "Empower your finances and earn rewards with every smart move."),
-            OnboardingItem(R.drawable.intro2, "Earn FundCoins Easily!", "Refer friends, make transactions, and set savings goals to earn FundCoins."),
-            OnboardingItem(R.drawable.intro3, "Unlock Exciting Rewards!", "Redeem FundCoins for travel vouchers, gift cards, and more. Let's start earning!")
+            OnboardingItem(R.drawable.intro2, "Earn FundCoins \nEasily!", "Refer friends, make transactions, and set savings goals to earn FundCoins."),
+            OnboardingItem(R.drawable.intro3, "Unlock Exciting \nRewards!", "Redeem FundCoins for travel vouchers, gift cards, and more. Let's start earning!")
+
         )
 
         onboardingAdapter = OnboardingAdapter(onboardingItems)
@@ -109,6 +113,16 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateButtonVisibility(position: Int) {
         buttonBack.visibility = if (position == 0) View.INVISIBLE else View.VISIBLE
-        buttonNext.text = if (position == onboardingAdapter.itemCount - 1) "Finish" else "Next"
+    }
+
+    private fun navigateToHome() {
+        val intent = Intent(this, HomeActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+    private fun navigateToPass() {
+        val intent = Intent(this, PasswordActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }

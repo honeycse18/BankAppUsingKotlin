@@ -3,8 +3,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="inactive">#FFFFFF</color>
-    <color name="active">#FFC107</color>
+    <color name="active">#CCAF7E</color>
     <color name="background">#141414</color>
+    <color name="hint_color">#F4F1EB</color>
     <color name="button_backColor">#F4F1EB</color>
 
 
