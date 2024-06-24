@@ -29,8 +29,8 @@ class HomeActivity : AppCompatActivity() {
             val inputText = editTextInput.text.toString()
             if (inputText.isNotEmpty()) {
                 Toast.makeText(this, "Confirmed: $inputText", Toast.LENGTH_SHORT).show()
-                // Navigate to PasswordActivity
-                val intent = Intent(this, PasswordActivity::class.java)
+                // Navigate to EnterPinActivity
+                val intent = Intent(this, EnterPinActivity::class.java)
                 startActivity(intent)
             } else {
                 Toast.makeText(this, "Please enter something", Toast.LENGTH_SHORT).show()
@@ -39,6 +39,8 @@ class HomeActivity : AppCompatActivity() {
 
         buttonSkip.setOnClickListener {
             Toast.makeText(this, "Skipped", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, WalletActivity::class.java)
+            startActivity(intent)
             // Handle skip logic here, e.g., navigate to another screen
         }
     }

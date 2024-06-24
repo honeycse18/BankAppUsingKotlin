@@ -121,7 +121,12 @@ class MainActivity : AppCompatActivity() {
         finish()
     }
     private fun navigateToPass() {
-        val intent = Intent(this, PasswordActivity::class.java)
+        val intent = Intent(this, EnterPinActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+    private fun navigateToWallet() {
+        val intent = Intent(this, WalletActivity::class.java)
         startActivity(intent)
         finish()
     }

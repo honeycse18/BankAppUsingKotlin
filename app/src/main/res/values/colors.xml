@@ -7,6 +7,7 @@
     <color name="background">#141414</color>
     <color name="hint_color">#F4F1EB</color>
     <color name="button_backColor">#F4F1EB</color>
+    <color name="wallet_balance_backColor">#E8E4DA</color>
 
 
 
